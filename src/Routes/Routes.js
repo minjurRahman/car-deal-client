@@ -1,4 +1,5 @@
 import { createBrowserRouter } from "react-router-dom";
+import Laxuarious from "../AllCategories/Laxuarious/Laxuarious";
 import Main from "../Layout/Main";
 import About from "../Pages/About/About";
 import Blog from "../Pages/Blog/Blog";
@@ -27,6 +28,10 @@ export const router = createBrowserRouter([
             {
                 path: '/blog',
                 element: <Blog></Blog>
+            },
+            {
+                path: '/luxury',
+                element: <Laxuarious></Laxuarious>
             }
         ]
     },

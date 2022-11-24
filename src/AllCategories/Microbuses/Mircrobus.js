@@ -1,11 +1,11 @@
 import React from 'react';
 
-const Signin = () => {
+const Mircrobus = () => {
     return (
         <div>
-            <h1>Sign in</h1>
+            
         </div>
     );
 };
 
-export default Signin;
+export default Mircrobus;
