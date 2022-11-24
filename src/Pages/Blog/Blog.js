@@ -1,15 +1,13 @@
 import React from 'react';
-import useTitle from '../../Hooks/useTitle';
 
 const Blog = () => {
-    useTitle('Blog')
     return (
         <section className="dark:bg-gray-800 m-20 dark:text-gray-100">
         <div className="container flex flex-col justify-center p-4 mx-auto md:p-8">
             <h2 className="mb-12 text-4xl font-bold leading-none text-center sm:text-5xl">Frequently Asked Questions</h2>
             <div className="flex flex-col divide-y sm:px-8 lg:px-12 xl:px-32 divide-gray-700">
                 <details>
-                    <summary className="py-2 outline-none cursor-pointer focus:underline">1. What are the different ways to manage a state in a React application ? </summary>
+                    <summary className="py-2 outline-none cursor-pointer focus:underline">1. What are the different ways to manage a state in a React application? </summary>
                     <div className="px-4 pb-4">
                         <p>1. Type – <br />
                             SQL databases are primarily called as Relational Databases (RDBMS); whereas NoSQL database are primarily called as non-relational or distributed database. <br />
@@ -33,7 +31,7 @@ const Blog = () => {
                     </div>
                 </details>
                 <details>
-                    <summary className="py-2 outline-none cursor-pointer focus:underline">2. How does prototypical inheritance work ?</summary>
+                    <summary className="py-2 outline-none cursor-pointer focus:underline">2. How does prototypical inheritance work?</summary>
                     <div className="px-4 pb-4">
                         <p>JSON Web Token (JWT) is an open standard (RFC 7519) that defines a compact and self-contained way for securely transmitting information between parties as a JSON object. This information can be verified and trusted because it is digitally signed. JWTs can be signed using a secret (with the HMAC algorithm) or a public/private key pair using RSA or ECDSA. <br />
                         How dose it workes? <br />

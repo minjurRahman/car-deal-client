@@ -1,70 +1,15 @@
-import React, { useContext, useState } from 'react';
+import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
-import { Link, useNavigate } from 'react-router-dom';
-import { AuthContext } from '../../Context/AuthProvider';
-import toast, { Toaster } from 'react-hot-toast';
-import useToken from '../../hooks/useToken';
+import { Link } from 'react-router-dom';
 
 const SignUp = () => {
     const { register, formState: { errors }, handleSubmit } = useForm();
-    // const {createUser, updateUser } = useContext(AuthContext);
+
     const [signUpError, setSignUpError] = useState('');
 
-    // //Access Token
-    // const [createdUserEmail, setCreatedUserEmail] = useState('');
-    // const  [token] = useToken(createdUserEmail);
+    const handleSignUp = data => {
 
-    // const navigate = useNavigate();
-    // if(token){
-    //     navigate('/');
-    // }
-     
-/*     const handleSignUp = data => {
-        
-        setSignUpError('');
-        createUser(data.email, data.password)
-        .then(result =>{
-            const user = result.user;
-            console.log(user)
-            toast('User created Successfully')
-            
-            //after creating user then we can update user
-            const userInfo = {
-                displayName: data.name
-            }
-            updateUser(userInfo)
-            .then(() => {
-                saveUser(data.name, data.email);
-            })
-            .catch(err => console.log(err));
-        })
-        .catch(error => {
-            console.log(error)
-            setSignUpError(error.message);
-        })
-    } */
-
-    const handleSignUp = data =>{
-        
     }
-
-
-/*     const saveUser = (name, email) =>{
-        const user = {name, email};
-        fetch('https://dental-care-server-lime.vercel.app/users', {
-            method: 'POST',
-            headers: {
-                'content-type': 'application/json'
-            },
-            body: JSON.stringify(user)
-        })
-        .then(res => res.json())
-        .then(data =>{
-            console.log(data);
-            setCreatedUserEmail(email);
-        })
-    } */
-
 
     return (
         <div className='h-[800px] flex justify-center items-center'>
@@ -99,7 +44,7 @@ const SignUp = () => {
 
                         <label className="label"><span className="label-text">Forget Password ?</span></label>
                     </div>
-                    <input className='btn btn-accent w-full mt-4 mb-2' type="submit" value="Sign Up" />
+                    <input className='btn btn-primary w-full mt-4 mb-2' type="submit" value="Sign Up" />
                     {signUpError && <p className='text-red-500'>{signUpError}</p>}
                 </form>
                 <p className=''>Already have an account <Link className='text-secondary' to='/login'>Please Login</Link></p>

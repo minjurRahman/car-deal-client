@@ -1,43 +1,10 @@
-import React, { useState, useContext } from 'react';
+import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
-import { Link, useLocation, useNavigate } from 'react-router-dom';
-import { AuthContext } from '../../Context/AuthProvider';
-import useToken from '../../hooks/useToken';
+import { Link } from 'react-router-dom';
 
 const Login = () => {
-
     const { register, formState: { errors }, handleSubmit } = useForm();
-    // const { signIn } = useContext(AuthContext);
     const [loginError, setLoginError] = useState('');
-
-    // //jwt token access
-    // const [loginUserEmail, setLoginUserEmail] = useState('');
-    // const [token] = useToken(loginUserEmail);
-    
-    // const location = useLocation();
-    // const navigate = useNavigate();
-
-    // const from = location.state?.from?.pathname || '/';
-    // if(token){
-    //     navigate(from, {replace: true});
-    // }
-
-    
-/*     const handleLogin = data => {
-        console.log(data)
-        setLoginError('');
-        signIn(data.email, data.password)
-        .then(result =>{
-            const user = result.user;
-            console.log(user);
-            setLoginUserEmail(data.email);
-            
-        })
-        .catch(error => {
-            console.log(error.message)
-            setLoginError(error.message)
-        })
-    } */
 
     const handleLogin = data =>{
 
@@ -67,7 +34,7 @@ const Login = () => {
 
                         <label className="label"><span className="label-text">Forget Password ?</span></label>
                     </div>
-                    <input className='btn btn-accent w-full mt-4 mb-2' type="submit" value="Login" />
+                    <input className='btn btn-primary w-full mt-4 mb-2' type="submit" value="Login" />
                     <div>
                         {loginError && <p className='text-red-500'>{loginError}</p>}
                     </div>
