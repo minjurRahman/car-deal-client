@@ -7,19 +7,19 @@ import useToken from '../../hooks/useToken';
 
 const SignUp = () => {
     const { register, formState: { errors }, handleSubmit } = useForm();
-    const {createUser, updateUser } = useContext(AuthContext);
+    // const {createUser, updateUser } = useContext(AuthContext);
     const [signUpError, setSignUpError] = useState('');
 
-    //Access Token
-    const [createdUserEmail, setCreatedUserEmail] = useState('');
-    const  [token] = useToken(createdUserEmail);
+    // //Access Token
+    // const [createdUserEmail, setCreatedUserEmail] = useState('');
+    // const  [token] = useToken(createdUserEmail);
 
-    const navigate = useNavigate();
-    if(token){
-        navigate('/');
-    }
+    // const navigate = useNavigate();
+    // if(token){
+    //     navigate('/');
+    // }
      
-    const handleSignUp = data => {
+/*     const handleSignUp = data => {
         
         setSignUpError('');
         createUser(data.email, data.password)
@@ -42,9 +42,14 @@ const SignUp = () => {
             console.log(error)
             setSignUpError(error.message);
         })
+    } */
+
+    const handleSignUp = data =>{
+        
     }
 
-    const saveUser = (name, email) =>{
+
+/*     const saveUser = (name, email) =>{
         const user = {name, email};
         fetch('https://dental-care-server-lime.vercel.app/users', {
             method: 'POST',
@@ -58,7 +63,8 @@ const SignUp = () => {
             console.log(data);
             setCreatedUserEmail(email);
         })
-    }
+    } */
+
 
     return (
         <div className='h-[800px] flex justify-center items-center'>

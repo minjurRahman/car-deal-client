@@ -7,22 +7,23 @@ import useToken from '../../hooks/useToken';
 const Login = () => {
 
     const { register, formState: { errors }, handleSubmit } = useForm();
-    const { signIn } = useContext(AuthContext);
+    // const { signIn } = useContext(AuthContext);
     const [loginError, setLoginError] = useState('');
 
-    //jwt token access
-    const [loginUserEmail, setLoginUserEmail] = useState('');
-    const [token] = useToken(loginUserEmail);
+    // //jwt token access
+    // const [loginUserEmail, setLoginUserEmail] = useState('');
+    // const [token] = useToken(loginUserEmail);
     
-    const location = useLocation();
-    const navigate = useNavigate();
+    // const location = useLocation();
+    // const navigate = useNavigate();
 
-    const from = location.state?.from?.pathname || '/';
-    if(token){
-        navigate(from, {replace: true});
-    }
+    // const from = location.state?.from?.pathname || '/';
+    // if(token){
+    //     navigate(from, {replace: true});
+    // }
+
     
-    const handleLogin = data => {
+/*     const handleLogin = data => {
         console.log(data)
         setLoginError('');
         signIn(data.email, data.password)
@@ -36,6 +37,10 @@ const Login = () => {
             console.log(error.message)
             setLoginError(error.message)
         })
+    } */
+
+    const handleLogin = data =>{
+
     }
 
     return (
