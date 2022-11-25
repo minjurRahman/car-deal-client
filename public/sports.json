@@ -1,38 +1,28 @@
 [
     {
-        "_id": "635a0c0b64a6d231228942ae",
-        "title": "Lambergini 2014",
-        "image": "https://mir-s3-cdn-cf.behance.net/project_modules/1400/5a006381524873.5d020d56c2ca2.jpg",
+        "categoryName": "Sports Cars",
+        "categoryId": 3,
+        "title": "Sports 222",
+        "image": "https://cdn.newsapi.com.au/image/v1/7f1c2fcf0d63510a712561fb655d017a",
         "location": "Gulshan, Dhaka",
-        "resalePrice": "18000",
-        "originalPrice": "30000",
+        "resalePrice": "45000",
+        "originalPrice": "65000",
         "YearsOfUse": "7",
         "sellersName": "Max",
         "description": "Find the best deals second hand Luxurious car. Get a amount of",
         "onDate": "12"
     },
     {
-        "_id": "635a0c0b64a6d231228942af",
-        "title": "Audi 2011",
-        "image": "https://cars.usnews.com/images/article/201712/127376/1-_concept_vw_ID.Space_vizzion_DB2019AU01600_large_Cropped.jpg",
+        "categoryName": "Sports Cars",
+        "categoryId": 3,
+        "title": "Lamborghini 111",
+        "image": "https://topauto.co.za/wp-content/uploads/2021/01/Lamborghini-Aventador-Header-768x469.jpg",
         "location": "Gulshan, Dhaka",
-        "resalePrice": "18000",
-        "originalPrice": "30000",
+        "resalePrice": "40000",
+        "originalPrice": "60000",
         "YearsOfUse": "7",
         "sellersName": "Max",
         "description": "Find the best deals second hand Electric car. Get a amount of",
-        "onDate": "12"
-    },
-    {
-        "_id": "635b591a1dafe382a9da8c96",
-        "title": "Toyota 2015",
-        "image": "https://images.livemint.com/img/2022/02/15/1600x900/Lexus_e-car_1644905451371_1644905458557.jpg",
-        "location": "Gulshan, Dhaka",
-        "resalePrice": "18000",
-        "originalPrice": "30000",
-        "YearsOfUse": "7",
-        "sellersName": "Max",
-        "description": "Find the best deals second hand Sports car. Get a amount of",
         "onDate": "12"
     }
 ]

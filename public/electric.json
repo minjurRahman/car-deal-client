@@ -1,38 +1,29 @@
 [
     {
-        "_id": "635a0c0b64a6d231228942ae",
-        "title": "Lambergini 2014",
-        "image": "https://mir-s3-cdn-cf.behance.net/project_modules/1400/5a006381524873.5d020d56c2ca2.jpg",
+        "categoryName": "Electric Cars",
+        "categoryId": 2,
+        "title": "Tesla-2015",
+        "image": "https://images.clickdealer.co.uk/vehicles/3575/3575202/full/76007683.jpg",
         "location": "Gulshan, Dhaka",
         "resalePrice": "18000",
         "originalPrice": "30000",
-        "YearsOfUse": "7",
-        "sellersName": "Max",
+        "YearsOfUse": "5",
+        "sellersName": "Maruf",
         "description": "Find the best deals second hand Luxurious car. Get a amount of",
         "onDate": "12"
     },
     {
         "_id": "635a0c0b64a6d231228942af",
-        "title": "Audi 2011",
-        "image": "https://cars.usnews.com/images/article/201712/127376/1-_concept_vw_ID.Space_vizzion_DB2019AU01600_large_Cropped.jpg",
+        "categoryName": "Electric Cars",
+        "categoryId": 2,
+        "title": "EV",
+        "image": "https://media.ed.edmunds-media.com/nissan/leaf/2015/fe/2015_nissan_leaf_f34_fe_20518_1600.jpg",
         "location": "Gulshan, Dhaka",
         "resalePrice": "18000",
         "originalPrice": "30000",
         "YearsOfUse": "7",
         "sellersName": "Max",
         "description": "Find the best deals second hand Electric car. Get a amount of",
-        "onDate": "12"
-    },
-    {
-        "_id": "635b591a1dafe382a9da8c96",
-        "title": "Toyota 2015",
-        "image": "https://images.livemint.com/img/2022/02/15/1600x900/Lexus_e-car_1644905451371_1644905458557.jpg",
-        "location": "Gulshan, Dhaka",
-        "resalePrice": "18000",
-        "originalPrice": "30000",
-        "YearsOfUse": "7",
-        "sellersName": "Max",
-        "description": "Find the best deals second hand Sports car. Get a amount of",
         "onDate": "12"
     }
 ]
