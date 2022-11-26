@@ -1,4 +1,5 @@
 import React, { useContext } from 'react';
+import toast from 'react-hot-toast';
 import { AuthContext } from '../Context/AuthProvider';
 
 const BookingModal = ({bookcar, setBookcar}) => {
@@ -15,6 +16,7 @@ const BookingModal = ({bookcar, setBookcar}) => {
         const price = form.price.value;
         const phone = form.phone.value;
         const location = form.location.value;
+        const onDate = new Date();
 
         const booking = {
             BuyerName: name,
@@ -23,9 +25,13 @@ const BookingModal = ({bookcar, setBookcar}) => {
             price,
             phone,
             location,
+            onDate,
         }
         console.log(booking)
+        //TODO post data to db
 
+        setBookcar(null);
+        toast.success('Your Booked Successfully');
     }
     return (
         <>

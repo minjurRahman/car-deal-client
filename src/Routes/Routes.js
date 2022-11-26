@@ -42,7 +42,7 @@ export const router = createBrowserRouter([
             },
             {
                 path: '/cars',
-                element: <Cars></Cars>
+                element: <PrivateRoute><Cars></Cars></PrivateRoute>
             }
         ]
     },

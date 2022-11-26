@@ -1,13 +1,14 @@
+import { useQuery } from '@tanstack/react-query';
 import React, { useEffect, useState } from 'react';
 import BookingModal from '../../BookingModal/BookingModal';
 import Loading from '../Shared/Loading/Loading';
 import Car from './Car';
 
 const Cars = () => {
-    const [cars, setCars] = useState([]);
+    // const [cars, setCars] = useState([]);
     const [bookcar, setBookcar] = useState(null);
 
-/* 
+
     const {data:cars = [], refetch, isLoading } = useQuery({
         queryKey: ['cars'],
         queryFn: async() => {
@@ -22,15 +23,17 @@ const Cars = () => {
         return <Loading></Loading>
     }
 
- */
 
+/* 
     useEffect( () =>{
         fetch('http://localhost:5000/cars')
         .then(res => res.json())
         .then(data => {
             setCars(data)
         })
-    },[])
+    },[]) */
+
+
     return (
         <div>
 
