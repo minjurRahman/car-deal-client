@@ -1,9 +1,9 @@
 import { createBrowserRouter } from "react-router-dom";
-import Laxuarious from "../AllCategories/Laxuarious/Laxuarious";
 import DashboardLayout from "../Layout/DashboardLayout";
 import Main from "../Layout/Main";
 import About from "../Pages/About/About";
 import Blog from "../Pages/Blog/Blog";
+import Cars from "../Pages/Cars/Cars";
 import Dashboard from "../Pages/Dashboard/Dashboard";
 import Home from "../Pages/Home/Home/Home";
 import Login from "../Pages/LoginRegistration/Login";
@@ -41,8 +41,8 @@ export const router = createBrowserRouter([
                 element: <Blog></Blog>
             },
             {
-                path: '/luxury',
-                element: <Laxuarious></Laxuarious>
+                path: '/cars',
+                element: <Cars></Cars>
             }
         ]
     },
