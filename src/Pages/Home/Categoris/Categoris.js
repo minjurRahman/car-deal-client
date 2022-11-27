@@ -15,7 +15,7 @@ const Categoris = () => {
 
 
     return (
-        <section className='mt-6'>
+        <section className='mt-12'>
             <div className='text-center my-6'>
                 <h3 className='text-3xl text-info'>Categories of Second hand Cars</h3>
                 <p>You can get a various type of second hand cars. To find a best quality please click as your choice.</p>

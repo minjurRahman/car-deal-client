@@ -29,7 +29,7 @@ const UsersOrders = () => {
                     <thead>
                     <tr>
                         <th></th>
-                        <th>User Image</th>
+                        <th>Product Image</th>
                         <th>Product Name</th>
                         <th>Price</th>
                         <th>Order Date</th>
@@ -38,7 +38,7 @@ const UsersOrders = () => {
                     </thead>
                     <tbody>
                         {
-                            bookings.map((booking, i) => <tr key={booking._id}>
+                            bookings?.map((booking, i) => <tr key={booking._id}>
                             
                             <th>{i+1}</th>
                             <th><div className="mask mask-squircle w-12 h-12">

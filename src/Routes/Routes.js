@@ -4,8 +4,11 @@ import Main from "../Layout/Main";
 import About from "../Pages/About/About";
 import Blog from "../Pages/Blog/Blog";
 import Cars from "../Pages/Cars/Cars";
+import AddACars from "../Pages/Dashboard/AddACars/AddACars";
+import Allsellers from "../Pages/Dashboard/AllSellers/Allsellers";
 import AllUsers from "../Pages/Dashboard/AllUsers/AllUsers";
 import Dashboard from "../Pages/Dashboard/Dashboard";
+import SellersCars from "../Pages/Dashboard/SellerCars/SellersCars";
 import UsersOrders from "../Pages/Dashboard/UsersOrders/UsersOrders";
 import Home from "../Pages/Home/Home/Home";
 import Login from "../Pages/LoginRegistration/Login";
@@ -61,7 +64,19 @@ export const router = createBrowserRouter([
             {
                 path: '/dashboard/users',
                 element: <AdminRoute><AllUsers></AllUsers></AdminRoute>
-            }
+            },
+            {
+                path: '/dashboard/addcars',
+                element: <AdminRoute><AddACars></AddACars></AdminRoute>
+            },
+            {
+                path: '/dashboard/sellers',
+                element: <AdminRoute><Allsellers></Allsellers></AdminRoute>
+            },
+            {
+                path: '/dashboard/mycars',
+                element: <AdminRoute><SellersCars></SellersCars></AdminRoute>
+            },
         ]
     }
 ])

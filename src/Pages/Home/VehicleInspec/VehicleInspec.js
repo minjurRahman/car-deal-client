@@ -2,7 +2,7 @@ import React from 'react';
 
 const VehicleInspec = () => {
     return (
-        <section className='mt-6'>
+        <section className='mt-12'>
             <div className="hero bg-base-200 py-12">
                 <div className="hero-content flex-col lg:flex-row-reverse">
                     <img src="https://eadn-wc04-1622458.nxedge.io/cdn/wp-content/uploads/2020/02/Inspection-150-Points-Feature-Small-Car-768x340px.jpg" className=" rounded-lg shadow-2xl lg:w-1/2" alt=''/>
