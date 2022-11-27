@@ -4,6 +4,7 @@ import Main from "../Layout/Main";
 import About from "../Pages/About/About";
 import Blog from "../Pages/Blog/Blog";
 import Cars from "../Pages/Cars/Cars";
+import AllUsers from "../Pages/Dashboard/AllUsers/AllUsers";
 import Dashboard from "../Pages/Dashboard/Dashboard";
 import UsersOrders from "../Pages/Dashboard/UsersOrders/UsersOrders";
 import Home from "../Pages/Home/Home/Home";
@@ -55,6 +56,10 @@ export const router = createBrowserRouter([
             {
                 path: '/dashboard',
                 element: <UsersOrders></UsersOrders>
+            },
+            {
+                path: '/dashboard/users',
+                element: <AllUsers></AllUsers>
             }
         ]
     }
