@@ -1,5 +1,6 @@
 import { useQuery } from '@tanstack/react-query';
 import React from 'react';
+import toast from 'react-hot-toast';
 import avatar from '../../../assets/avater.png'
 
 const AllUsers = () => {
@@ -13,6 +14,21 @@ const AllUsers = () => {
         }
     })
 
+    const handleMakeAdmin = id =>{
+        fetch(`http://localhost:5000/users/admin/${id}`, {
+            method: 'PUT',
+            headers: {
+                authorization: `bearer ${localStorage.getItem('accessToken')}`
+            }
+        })
+        .then(res => res.json())
+        .then(data => {
+            if(data.modifiedCount > 0){
+                toast.success('Admin create Successfully.')
+                refetch();
+            }
+        })
+    }
 
     return (
         <div>
@@ -23,10 +39,10 @@ const AllUsers = () => {
                     <tr>
                         <th></th>
                         <th>User Image</th>
-                        <th>Product Name</th>
-                        <th>Price</th>
-                        <th>Order Date</th>
-                        <th>Payment</th>
+                        <th>User Name</th>
+                        <th>Email</th>
+                        <th>Admin create</th>
+                        <th>Delete</th>
                     </tr>
                     </thead>
                     <tbody>
@@ -40,8 +56,10 @@ const AllUsers = () => {
                             </th>
                             <td>{user.name}</td>
                             <td>{user.email}</td>
-                            <td>Pay</td>
+                            <td>{ user?.role !== 'admin' &&  <button onClick={() => handleMakeAdmin(user._id)} className='btn btn-xs btn-primary'>Make Admin</button>}</td>
+                            <td><button className='btn btn-xs btn-secondary'>Delete</button></td>
                         </tr>)
+
                         }
 
                     </tbody>

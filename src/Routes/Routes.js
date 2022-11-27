@@ -11,6 +11,7 @@ import Home from "../Pages/Home/Home/Home";
 import Login from "../Pages/LoginRegistration/Login";
 import SignUp from "../Pages/LoginRegistration/SignUp";
 import ErrorPage from "../Pages/Shared/ErrorPage";
+import AdminRoute from "./AdminRoute";
 import PrivateRoute from "./PrivateRoute";
 
 
@@ -59,7 +60,7 @@ export const router = createBrowserRouter([
             },
             {
                 path: '/dashboard/users',
-                element: <AllUsers></AllUsers>
+                element: <AdminRoute><AllUsers></AllUsers></AdminRoute>
             }
         ]
     }
