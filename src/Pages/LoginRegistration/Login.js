@@ -37,7 +37,8 @@ const Login = () => {
             const user = result.user;
             setUser(user)
             navigate(from, {replace: true})
-        }).catch(error => console.error(error))
+        })
+        .catch(error => console.error(error))
 
     }
 

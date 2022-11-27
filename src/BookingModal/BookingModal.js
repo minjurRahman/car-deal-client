@@ -27,11 +27,24 @@ const BookingModal = ({bookcar, setBookcar}) => {
             location,
             onDate,
         }
-        console.log(booking)
-        //TODO post data to db
+        // console.log(booking)
+        fetch('http://localhost:5000/bookings', {
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(booking)
+        })
+        .then(res => res.json())
+        .then(data => {
+            console.log(data);
+            if(data.acknowledged){
+                setBookcar(null);
+                toast.success('Your Booked Successfully');
+            }
+        })
 
-        setBookcar(null);
-        toast.success('Your Booked Successfully');
+        
     }
     return (
         <>
@@ -42,7 +55,7 @@ const BookingModal = ({bookcar, setBookcar}) => {
                     <h3 className="text-lg font-bold">{title}</h3>
 
                     <form onSubmit={handleBooking} className=' grid grid-cols-1 gap-3 mt-10'>
-                        <input name='name' type="text" defaultValue={user?.displayName} className="input input-bordered w-full " placeholder='Your Name' required />
+                        <input name='name' type="text" defaultValue={user?.displayName} className="input input-bordered w-full " placeholder='Your Name' required disabled/>
 
                         <input name='email' type="email" defaultValue={user?.email} placeholder="Email Address" className="input input-bordered w-full " readOnly disabled />
 
@@ -50,7 +63,7 @@ const BookingModal = ({bookcar, setBookcar}) => {
 
                         <input name='price' type="text" defaultValue={resalePrice} placeholder="Price" className="input input-bordered w-full" required  disabled/>
 
-                        <input name='phone' type="text" Value={+8801930000004} placeholder="Phone Number" className="input input-bordered w-full " required disabled/>
+                        <input name='phone' type="tel"  placeholder="Your Phone Number" className="input input-bordered w-full " required />
                         
                         <input name='location' type="text" defaultValue={location} className="input input-bordered w-full" required  disabled/>
 

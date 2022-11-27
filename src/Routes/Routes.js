@@ -5,6 +5,7 @@ import About from "../Pages/About/About";
 import Blog from "../Pages/Blog/Blog";
 import Cars from "../Pages/Cars/Cars";
 import Dashboard from "../Pages/Dashboard/Dashboard";
+import UsersOrders from "../Pages/Dashboard/UsersOrders/UsersOrders";
 import Home from "../Pages/Home/Home/Home";
 import Login from "../Pages/LoginRegistration/Login";
 import SignUp from "../Pages/LoginRegistration/SignUp";
@@ -41,8 +42,9 @@ export const router = createBrowserRouter([
                 element: <Blog></Blog>
             },
             {
-                path: '/cars',
-                element: <PrivateRoute><Cars></Cars></PrivateRoute>
+                path: '/cars/:categoryId',
+                element: <PrivateRoute><Cars></Cars></PrivateRoute>,
+                loader: ({params}) => fetch(`http://localhost:5000/category/${params.categoryId}`)
             }
         ]
     },
@@ -52,7 +54,7 @@ export const router = createBrowserRouter([
         children: [
             {
                 path: '/dashboard',
-                element: <Dashboard></Dashboard>
+                element: <UsersOrders></UsersOrders>
             }
         ]
     }

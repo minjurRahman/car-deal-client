@@ -1,29 +1,13 @@
 import { useQuery } from '@tanstack/react-query';
 import React, { useEffect, useState } from 'react';
+import { useLoaderData } from 'react-router-dom';
 import BookingModal from '../../BookingModal/BookingModal';
 import Loading from '../Shared/Loading/Loading';
 import Car from './Car';
 
 const Cars = () => {
-    // const [cars, setCars] = useState([]);
     const [bookcar, setBookcar] = useState(null);
-
-
-    const {data:cars = [], refetch, isLoading } = useQuery({
-        queryKey: ['cars'],
-        queryFn: async() => {
-            const res = await fetch('http://localhost:5000/cars')
-            const data = await res.json();
-            return data
-        }
-        
-    });
-
-    if(isLoading){
-        return <Loading></Loading>
-    }
-
-
+    const cars = useLoaderData();
 /* 
     useEffect( () =>{
         fetch('http://localhost:5000/cars')

@@ -15,7 +15,7 @@ const About = () => {
                 data-aos-duration="500">
                 <h1 className='text-4xl text-info font-bold mb-4'>About Us</h1>
                     <h1 className="text-5xl font-bold">Welcome to Car Deal</h1>
-                    <p className="py-6">We provide internationally Second hand Cars & services including Flights, Accommodation, Land transport, Tours, Holiday packages, Visa processing among many other services. We cater to a wide range of needs including Leisure & Business travel. Having a wide network around the world we provide holiday packages to 100+ destinations. From budget travelers to ultra luxury 7 star tourists we cater to every need. Delivering value for your money is our prime goal. With a team of experienced travel professionals we deliver exactly what we promise. We do what we say & say what we do.</p>
+                    <p className="py-6">We provide internationally Second hand Cars. Simply put: We don’t sell lemons. All cars must pass the 150-point inspection by ASE-Certified technicians. Certified cars are reconditioned to like-new. If there are any minor defects, we show you up front in HD. And every Shift vehicle has a full inspection report and free CARFAX vehicle history.</p>
                     <button className="btn btn-info">Get More Info</button>
                 </div>
             </div>

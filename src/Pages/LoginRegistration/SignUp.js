@@ -4,17 +4,23 @@ import { useForm } from 'react-hook-form';
 import toast from 'react-hot-toast';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../Context/AuthProvider';
+import useToken from '../../Hooks/useToken';
 
 const SignUp = () => {
     const { register, formState: { errors }, handleSubmit } = useForm();
     const {createUser, updateUser, providerLogin, setUser } = useContext(AuthContext);
     const [signUpError, setSignUpError] = useState('');
-
     const googleProvider = new GoogleAuthProvider();
+    const [createdUserEmail, setCreatedUserEmail] = useState('');
+    const [token] = useToken(createdUserEmail)
 
     const location = useLocation();
     const navigate = useNavigate();
     const from = location.state?.from?.pathname || '/';   
+
+    if(token){
+        navigate('/');
+    }
 
     const handleSignUp = data => {
         setSignUpError('');
@@ -23,12 +29,14 @@ const SignUp = () => {
             const user = result.user;
             console.log(user);
             toast.success('User Created Successfully.')
-            navigate(from, {replace: true})
+            
             const userInfo = {
                 displayName: data.name
             }
             updateUser(userInfo)
-            .then(() => {})
+            .then(() => {
+                saveUserToDb(data.name, data.email);
+            })
             .catch(error => console.log(error))
         })
         .catch(error => {
@@ -47,6 +55,24 @@ const SignUp = () => {
             navigate(from, {replace: true})
         }).catch(error => console.error(error))
 
+    }
+
+    //Post user info in the DB
+    const saveUserToDb = (name, email) =>{
+        const user = {name, email};
+        fetch('http://localhost:5000/users', {
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(user)
+        })
+        .then(res => res.json())
+        .then(data =>{
+            console.log(data);
+            setCreatedUserEmail(email);
+            // navigate(from, {replace: true})
+        })
     }
 
     return (
