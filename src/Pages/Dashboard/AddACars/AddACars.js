@@ -10,7 +10,7 @@ const AddACars = () => {
     const { user } = useContext(AuthContext);
 
     const navigate = useNavigate();
-    const postDate = new Date();
+    const onDate = new Date();
 
     const handleAddCars = data =>{
         const image = data.image[0]
@@ -28,16 +28,16 @@ const AddACars = () => {
                 const car = {
                     title: data.name,
                     email: user?.email,
-                    sellerName: user?.displayName,
+                    sellersName: user?.displayName,
                     categoryId: data.categoryId,
                     image: imgData.data.url,
                     resalePrice: data.resalePrice,
                     condition: data.condition,
                     location: data.location,
                     categoryName: data.categoryName,
-                    onDate: data.onDate,
+                    YearsOfUse: data.YearsOfParcel,
                     description: data.description,
-                    postDate 
+                    onDate 
 
                 }
                 //Save sellers post to DB
@@ -133,7 +133,7 @@ const AddACars = () => {
                     <div className="form-control w-full ">
                         <label className="label"><span className="label-text">Years Of Purchase</span></label>
                         <input type="text"
-                         {...register("onDate", {required: "Name is required"})}
+                         {...register("YearsOfParcel", {required: "Name is required"})}
                          className="input input-bordered w-full " /> 
                          {errors.name && <p className='text-red-600'>{errors.name?.message}</p>}
                     </div>

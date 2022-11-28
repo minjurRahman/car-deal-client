@@ -1,7 +1,7 @@
 import { useQuery } from '@tanstack/react-query';
 import React from 'react';
 import toast from 'react-hot-toast';
-import avatar from '../../../assets/avater.png'
+import userP from '../../../assets/user.png'
 
 const AllUsers = () => {
 
@@ -50,8 +50,8 @@ const AllUsers = () => {
                             users.map((user, i) => <tr key={user._id}>
                             
                             <th>{i+1}</th>
-                            <th><div className="mask mask-squircle w-12 h-12">
-                                <img src={user?.photoURL ? user.photoURL : avatar } alt="Avatar" />
+                            <th><div className="mask mask-circle w-12 h-12">
+                                <img src={user?.photoURL ? user.photoURL : userP } alt="Avatar" />
                             </div>
                             </th>
                             <td>{user.name}</td>

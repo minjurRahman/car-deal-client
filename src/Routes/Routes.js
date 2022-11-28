@@ -63,7 +63,7 @@ export const router = createBrowserRouter([
     {
         path: '/dashboard',
         element: <PrivateRoute><DashboardLayout></DashboardLayout></PrivateRoute>,
-        errorElement: <ErrorPage></ErrorPage>,
+        // errorElement: <ErrorPage></ErrorPage>,
         children: [
             {
                 path: '/dashboard',
@@ -75,7 +75,7 @@ export const router = createBrowserRouter([
             },
             {
                 path: '/dashboard/addcars',
-                element: <AdminRoute><AddACars></AddACars></AdminRoute>
+                element: <AddACars></AddACars>
             },
             {
                 path: '/dashboard/sellers',
@@ -83,7 +83,7 @@ export const router = createBrowserRouter([
             },
             {
                 path: '/dashboard/mycars',
-                element: <AdminRoute><SellersCars></SellersCars></AdminRoute>
+                element: <SellerRoute><SellersCars></SellersCars></SellerRoute>
             },
             {
                 path: '/dashboard/payment/:id',

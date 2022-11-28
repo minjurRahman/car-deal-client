@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Car = ({car, setBookcar}) => {
-    const { title, image, location, resalePrice, originalPrice, YearsOfUse, sellersName, description, onDate } = car;
+    const { title, image, location, resalePrice, originalPrice, YearsOfUse, sellersName, description, onDate, } = car;
 
     return (
         <div className="card card-compact bg-base-100 shadow-xl">

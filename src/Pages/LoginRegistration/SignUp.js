@@ -85,8 +85,8 @@ const SignUp = () => {
                      <select
                             {...register("status")}
                             className="select select-bordered w-full max-w-xs">
-                            <option value='seller'>Buyer</option>
-                            <option value='buyer'>Seller</option>
+                            <option value='buyer'>Buyer</option>
+                            <option value='seller'>Seller</option>
                      </select>
                     <div className="form-control w-full max-w-xs">
                         <label className="label"><span className="label-text">Name</span></label>

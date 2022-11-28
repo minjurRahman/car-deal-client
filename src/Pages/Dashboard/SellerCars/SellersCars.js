@@ -15,7 +15,7 @@ const SellersCars = () => {
         setDeleteCar(null);
     }
 
-    const url = `https://products-resale-server-dusky.vercel.app/sellersCar?email=${user?.email}`;
+    const url = `http://localhost:5000/sellersCar?email=${user?.email}`;
 
     const {data: cars = [], isLoading, refetch } = useQuery({
         queryKey: ['cars', user?.email],
@@ -53,10 +53,10 @@ const SellersCars = () => {
 
     return (
         <div className='m-5'>
-            <h3 className='text-3xl mb-6'>My Cars {cars.length}</h3>
+            <h3 className='text-3xl mb-6'>My Posted Cars  {cars.length}</h3>
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
                 {
-                    cars.map(car => <div key={car._id} className="card bg-base-100 shadow-xl">
+                    cars?.map(car => <div key={car._id} className="card bg-base-100 shadow-xl">
                     <figure><img src={car.image} alt="Cars" /></figure>
                     <div className="card-body">
                       <h2 className="card-title">
