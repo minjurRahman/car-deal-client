@@ -15,7 +15,7 @@ const SellersCars = () => {
         setDeleteCar(null);
     }
 
-    const url = `http://localhost:5000/sellersCar?email=${user?.email}`;
+    const url = `https://products-resale-server-dusky.vercel.app/sellersCar?email=${user?.email}`;
 
     const {data: cars = [], isLoading, refetch } = useQuery({
         queryKey: ['cars', user?.email],
