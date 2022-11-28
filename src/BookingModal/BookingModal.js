@@ -29,7 +29,7 @@ const BookingModal = ({bookcar, setBookcar}) => {
             image,
         }
         // console.log(booking)
-        fetch('http://localhost:5000/bookings', {
+        fetch('https://products-resale-server-dusky.vercel.app/bookings', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

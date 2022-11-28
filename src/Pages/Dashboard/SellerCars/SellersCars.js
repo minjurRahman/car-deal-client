@@ -15,7 +15,7 @@ const SellersCars = () => {
         setDeleteCar(null);
     }
 
-    const url = `http://localhost:5000/sellersCar?email=${user?.email}`;
+    const url = `https://products-resale-server-dusky.vercel.app/sellersCar?email=${user?.email}`;
 
     const {data: cars = [], isLoading, refetch } = useQuery({
         queryKey: ['cars', user?.email],
@@ -32,7 +32,7 @@ const SellersCars = () => {
     })
 
     const handleDeleteCar = car =>{
-        fetch(`http://localhost:5000/sellersCar/${car._id}`, {
+        fetch(`https://products-resale-server-dusky.vercel.app/sellersCar/${car._id}`, {
             method: 'DELETE',
             headers: {
                 authorization: `bearer ${localStorage.getItem('accessToken')}`

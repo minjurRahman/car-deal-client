@@ -41,7 +41,7 @@ const AddACars = () => {
 
                 }
                 //Save sellers post to DB
-                fetch('http://localhost:5000/cars',{
+                fetch('https://products-resale-server-dusky.vercel.app/cars',{
                     method: 'POST',
                     headers: {
                         'content-type': 'application/json',
@@ -57,7 +57,7 @@ const AddACars = () => {
                 })
 
                 //Selers Cars post to DB
-                fetch('http://localhost:5000/sellersCar',{
+                fetch('https://products-resale-server-dusky.vercel.app/sellersCar',{
                     method: 'POST',
                     headers: {
                         'content-type': 'application/json',

@@ -51,7 +51,7 @@ export const router = createBrowserRouter([
             {
                 path: '/cars/:categoryId',
                 element: <PrivateRoute><Cars></Cars></PrivateRoute>,
-                loader: ({params}) => fetch(`http://localhost:5000/category/${params.categoryId}`)
+                loader: ({params}) => fetch(`https://products-resale-server-dusky.vercel.app/category/${params.categoryId}`)
             },
             {
                 path: '/advertise/:id',
@@ -86,7 +86,7 @@ export const router = createBrowserRouter([
             {
                 path: '/dashboard/payment/:id',
                 element: <AdminRoute><Payment></Payment></AdminRoute>,
-                loader: ({params}) => fetch(`http://localhost:5000/bookings/${params.id}`)
+                loader: ({params}) => fetch(`https://products-resale-server-dusky.vercel.app/bookings/${params.id}`)
             },
         ]
     }

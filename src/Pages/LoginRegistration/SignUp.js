@@ -60,7 +60,7 @@ const SignUp = () => {
     //Post user info in the DB
     const saveUserToDb = (name, email, status) =>{
         const user = {name, email, status};
-        fetch('http://localhost:5000/users', {
+        fetch('https://products-resale-server-dusky.vercel.app/users', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
