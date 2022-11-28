@@ -35,7 +35,7 @@ const SignUp = () => {
             }
             updateUser(userInfo)
             .then(() => {
-                saveUserToDb(data.name, data.email);
+                saveUserToDb(data.name, data.email, data.status);
             })
             .catch(error => console.log(error))
         })
@@ -58,8 +58,8 @@ const SignUp = () => {
     }
 
     //Post user info in the DB
-    const saveUserToDb = (name, email) =>{
-        const user = {name, email};
+    const saveUserToDb = (name, email, status) =>{
+        const user = {name, email, status};
         fetch('http://localhost:5000/users', {
             method: 'POST',
             headers: {
@@ -78,8 +78,16 @@ const SignUp = () => {
     return (
         <div className='h-[800px] flex justify-center items-center'>
             <div className='w-96 p-7'>
-                <h2 className='text-xl text-center font-bold'>Sign Up</h2>
+            <h2 className='text-xl text-center font-bold'>Sign Up</h2>
+            
             <form onSubmit={handleSubmit(handleSignUp)}>
+                     <label className="label"> <span className="label-text">Sign up as</span> </label>
+                     <select
+                            {...register("status")}
+                            className="select select-bordered w-full max-w-xs">
+                            <option value='seller'>Seller</option>
+                            <option value='buyer'>Buyer</option>
+                     </select>
                     <div className="form-control w-full max-w-xs">
                         <label className="label"><span className="label-text">Name</span></label>
                         <input type="text"

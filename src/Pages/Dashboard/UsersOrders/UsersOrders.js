@@ -2,6 +2,7 @@ import { useQuery } from '@tanstack/react-query';
 import React, { useContext, useEffect, useState } from 'react';
 import { AuthContext } from '../../../Context/AuthProvider';
 import avater from '../../../assets/avater.png'
+import { Link } from 'react-router-dom';
 
 const UsersOrders = () => {
     const { user } = useContext(AuthContext);
@@ -41,14 +42,24 @@ const UsersOrders = () => {
                             bookings?.map((booking, i) => <tr key={booking._id}>
                             
                             <th>{i+1}</th>
-                            <th><div className="mask mask-squircle w-12 h-12">
-                                <img src={user?.photoURL ? user.photoURL : avater } alt="Avatar" />
+                            <th><div className="mask w-12 h-12">
+                                <img src={booking?.image ? booking.image : avater } alt="Avatar" />
                             </div>
                             </th>
                             <td>{booking.itemName}</td>
                             <td>{booking.price}</td>
-                            <td>{booking.onDate}</td>
-                            <td>Pay</td>
+                            <td>{(booking.onDate.slice(0, 10))}</td>
+                            <td>
+                                 {
+                                    booking.price && !booking.paid && <Link 
+                                    to={`/dashboard/payment/${booking._id}`}>
+                                    <button className='btn btn-primary btn-sm'>Pay</button>
+                                    </Link>
+                                 }
+                                 {
+                                     booking.price && booking.paid && <span className='text-green-500'>Paid</span>
+                                 }
+                            </td>
                         </tr>)
                         }
 

@@ -26,6 +26,7 @@ const BookingModal = ({bookcar, setBookcar}) => {
             phone,
             location,
             onDate,
+            image,
         }
         // console.log(booking)
         fetch('http://localhost:5000/bookings', {

@@ -56,7 +56,7 @@ const AddACars = () => {
                     navigate('/dashboard/mycars')
                 })
 
-                //Selers Cars
+                //Selers Cars post to DB
                 fetch('http://localhost:5000/sellersCar',{
                     method: 'POST',
                     headers: {
@@ -75,74 +75,74 @@ const AddACars = () => {
     }
 
     return (
-        <div className=''>
+        <div className='w-9/12 mx-auto my-12 mb-5'>
             <h2 className='text-4xl mb-5'>Post Your Cars To Selling</h2>
             <form onSubmit={handleSubmit(handleAddCars)}>
-                    <div className="form-control w-full max-w-xs">
+                    <div className="form-control w-full ">
                         <label className="label"><span className="label-text">Car Name</span></label>
                         <input type="text"
                          {...register("name", {required: "Name is required"})}
-                         className="input input-bordered w-full max-w-xs" /> 
+                         className="input input-bordered w-full " /> 
                          {errors.name && <p className='text-red-600'>{errors.name?.message}</p>}
                     </div>
 
-                    <div className="form-control w-full max-w-xs">
+                    <div className="form-control w-full ">
                         <label className="label"><span className="label-text">Price in Doller</span></label>
                         <input type="number"
                          {...register("resalePrice", {required: "Price is required"})}
-                         className="input input-bordered w-full max-w-xs" /> 
+                         className="input input-bordered w-full " /> 
                          {errors.name && <p className='text-red-600'>{errors.name?.message}</p>}
                     </div>
 
-                    <div className="form-control w-full max-w-xs">
+                    <div className="form-control w-full ">
                         <label className="label"><span className="label-text">Condition</span></label>
                         <select 
                         {...register('condition', {required: "Condition is required"})}
-                        className="select input-bordered w-full max-w-xs">
+                        className="select input-bordered w-full ">
                             <option value='Excellent'>Excellent</option>
                             <option value='Good'>Good</option>
                             <option value='Fair'>Fair</option>
                         </select>
                     </div>
 
-                    <div className="form-control w-full max-w-xs">
+                    <div className="form-control w-full ">
                         <label className="label"><span className="label-text">Mobile Number</span></label>
                         <input type="tel"
                          {...register("phone", {required: "Phone number is required"})}
-                         className="input input-bordered w-full max-w-xs" /> 
+                         className="input input-bordered w-full " /> 
                          {errors.name && <p className='text-red-600'>{errors.name?.message}</p>}
                     </div>
 
-                    <div className="form-control w-full max-w-xs">
+                    <div className="form-control w-full ">
                         <label className="label"><span className="label-text">Location</span></label>
                         <input type="text"
                          {...register("location", {required: "Location is required"})}
-                         className="input input-bordered w-full max-w-xs" /> 
+                         className="input input-bordered w-full " /> 
                          {errors.name && <p className='text-red-600'>{errors.name?.message}</p>}
                     </div>
 
-                    <div className="form-control w-full max-w-xs">
+                    <div className="form-control w-full ">
                         <label className="label"><span className="label-text">Email</span></label>
                         <input type="email" 
                          {...register("email")}
                          defaultValue={user?.email}
-                         className="input input-bordered w-full max-w-xs" disabled/> 
+                         className="input input-bordered w-full " disabled/> 
                          {errors.email && <p className='text-red-600'>{errors.email?.message}</p>}
                     </div>
 
-                    <div className="form-control w-full max-w-xs">
+                    <div className="form-control w-full ">
                         <label className="label"><span className="label-text">Years Of Purchase</span></label>
                         <input type="text"
                          {...register("onDate", {required: "Name is required"})}
-                         className="input input-bordered w-full max-w-xs" /> 
+                         className="input input-bordered w-full " /> 
                          {errors.name && <p className='text-red-600'>{errors.name?.message}</p>}
                     </div>
 
-                    <div className="form-control w-full max-w-xs">
+                    <div className="form-control w-full ">
                         <label className="label"><span className="label-text">Category Name</span></label>
                         <select 
                         {...register('categoryId', {required: "Category Name is required"})}
-                        className="select input-bordered w-full max-w-xs">
+                        className="select input-bordered w-full ">
                             <option value='Luxurious Cars'>Luxurious Cars</option>
                             <option value='Electric Cars'>Electric Cars</option>
                             <option value='Sports Cars'>Sports Cars</option>
@@ -150,11 +150,11 @@ const AddACars = () => {
                             
                         </select>
                     </div>
-                    <div className="form-control w-full max-w-xs">
+                    <div className="form-control w-full ">
                         <label className="label"><span className="label-text">Category ID</span></label>
                         <select 
                         {...register('categoryId', {required: "Category Id is required"})}
-                        className="select input-bordered w-full max-w-xs">
+                        className="select input-bordered w-full ">
                             <option value={1}>1</option>
                             <option value={2}>2</option>
                             <option value={3}>3</option>
@@ -162,21 +162,21 @@ const AddACars = () => {
                             
                         </select>
                     </div>
-                    <div className="form-control w-full max-w-xs">
+                    <div className="form-control w-full ">
                         <label className="label"><span className="label-text">Description</span></label>
                         <textarea
                         {...register('description')}
                         className="textarea textarea-bordered" placeholder="Short Description"></textarea>
                     </div>
 
-                    <div className="form-control w-full max-w-xs">
+                    <div className="form-control w-full ">
                         <label className="label"><span className="label-text">Photo</span></label>
                         <input type="file"
                          {...register("image", {required: "Photo is required"})}
-                         className="input input-bordered w-full max-w-xs p-2 " /> 
+                         className="input input-bordered w-full  p-2 " /> 
                          {errors.image && <p className='text-red-600'>{errors.img?.message}</p>}
                     </div>
-                    <input className='btn btn-primary w-full max-w-xs mt-4 mb-2' type="submit" value="Post Car" />
+                    <input className='btn btn-primary w-full  mt-4 mb-2' type="submit" value="Post Car" />
                     
                 </form>
         </div>

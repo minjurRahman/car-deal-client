@@ -8,15 +8,6 @@ import Car from './Car';
 const Cars = () => {
     const [bookcar, setBookcar] = useState(null);
     const cars = useLoaderData();
-/* 
-    useEffect( () =>{
-        fetch('http://localhost:5000/cars')
-        .then(res => res.json())
-        .then(data => {
-            setCars(data)
-        })
-    },[]) */
-
 
     return (
         <div className='m-6 pt-6'>

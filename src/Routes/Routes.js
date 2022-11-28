@@ -8,8 +8,10 @@ import AddACars from "../Pages/Dashboard/AddACars/AddACars";
 import Allsellers from "../Pages/Dashboard/AllSellers/Allsellers";
 import AllUsers from "../Pages/Dashboard/AllUsers/AllUsers";
 import Dashboard from "../Pages/Dashboard/Dashboard";
+import Payment from "../Pages/Dashboard/Payment/Payment";
 import SellersCars from "../Pages/Dashboard/SellerCars/SellersCars";
 import UsersOrders from "../Pages/Dashboard/UsersOrders/UsersOrders";
+import Advertise from "../Pages/Home/Advertise/Advertise";
 import Home from "../Pages/Home/Home/Home";
 import Login from "../Pages/LoginRegistration/Login";
 import SignUp from "../Pages/LoginRegistration/SignUp";
@@ -50,6 +52,10 @@ export const router = createBrowserRouter([
                 path: '/cars/:categoryId',
                 element: <PrivateRoute><Cars></Cars></PrivateRoute>,
                 loader: ({params}) => fetch(`http://localhost:5000/category/${params.categoryId}`)
+            },
+            {
+                path: '/advertise/:id',
+                element: <Advertise></Advertise>
             }
         ]
     },
@@ -76,6 +82,11 @@ export const router = createBrowserRouter([
             {
                 path: '/dashboard/mycars',
                 element: <AdminRoute><SellersCars></SellersCars></AdminRoute>
+            },
+            {
+                path: '/dashboard/payment/:id',
+                element: <AdminRoute><Payment></Payment></AdminRoute>,
+                loader: ({params}) => fetch(`http://localhost:5000/bookings/${params.id}`)
             },
         ]
     }
