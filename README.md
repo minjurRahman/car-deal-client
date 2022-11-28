@@ -1,11 +1,11 @@
-# Project Name:
-   Travel guardian
+# Project Name: 
+   Car Deal
 
 ## Client side Link:
-  firebase : 
+  firebase : https://used-cars-4f989.web.app/
 
 ### Server side Link:
- V: 
+ V: https://products-resale-server-dusky.vercel.app/
 
 ### Project details
 
