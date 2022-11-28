@@ -7,6 +7,10 @@
 ### Server side Link:
  V: https://products-resale-server-dusky.vercel.app/
 
+ ### Admin 
+ email: minjur@gmail.com
+ pass: 123456
+
 ### Project details
 
 
