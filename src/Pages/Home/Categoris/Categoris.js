@@ -1,15 +1,16 @@
 import { useQuery } from '@tanstack/react-query';
 import React, { useEffect, useState } from 'react';
 import Category from './Category';
+import axios from 'axios';
 
 const Categoris = () => {
 
     const {data: categories = [] } = useQuery({
         queryKey: ['category'],
         queryFn: async() => {
-         const res = await fetch('https://products-resale-server-dusky.vercel.app/category')
-         const data = res.json();
-         return data;
+            const res = await axios.get('https://products-resale-server-dusky.vercel.app/category')
+
+         return res.data;
         }
     })
 
