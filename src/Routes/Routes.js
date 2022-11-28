@@ -18,6 +18,7 @@ import SignUp from "../Pages/LoginRegistration/SignUp";
 import ErrorPage from "../Pages/Shared/ErrorPage";
 import AdminRoute from "./AdminRoute";
 import PrivateRoute from "./PrivateRoute";
+import SellerRoute from "./SellerRoute";
 
 
 
@@ -26,7 +27,7 @@ export const router = createBrowserRouter([
     {
         path: '/',
         element: <Main></Main>,
-        // errorElement: <ErrorPage></ErrorPage>,
+        errorElement: <ErrorPage></ErrorPage>,
         children: [
             {
                 path: '/',
@@ -62,6 +63,7 @@ export const router = createBrowserRouter([
     {
         path: '/dashboard',
         element: <PrivateRoute><DashboardLayout></DashboardLayout></PrivateRoute>,
+        errorElement: <ErrorPage></ErrorPage>,
         children: [
             {
                 path: '/dashboard',
@@ -85,7 +87,7 @@ export const router = createBrowserRouter([
             },
             {
                 path: '/dashboard/payment/:id',
-                element: <AdminRoute><Payment></Payment></AdminRoute>,
+                element: <Payment></Payment>,
                 loader: ({params}) => fetch(`https://products-resale-server-dusky.vercel.app/bookings/${params.id}`)
             },
         ]
