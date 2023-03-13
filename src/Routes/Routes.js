@@ -57,13 +57,17 @@ export const router = createBrowserRouter([
             {
                 path: '/advertise/:id',
                 element: <Advertise></Advertise>
-            }
+            },
+            /* {
+                path: '/contact-us',
+                element: <Contact></Contact>
+            }, */
         ]
     },
     {
         path: '/dashboard',
         element: <PrivateRoute><DashboardLayout></DashboardLayout></PrivateRoute>,
-        // errorElement: <ErrorPage></ErrorPage>,
+        errorElement: <ErrorPage></ErrorPage>,
         children: [
             {
                 path: '/dashboard',
