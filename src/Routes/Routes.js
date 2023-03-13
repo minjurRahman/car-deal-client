@@ -4,6 +4,7 @@ import Main from "../Layout/Main";
 import About from "../Pages/About/About";
 import Blog from "../Pages/Blog/Blog";
 import Cars from "../Pages/Cars/Cars";
+import Contact from "../Pages/Contact/Contact";
 import AddACars from "../Pages/Dashboard/AddACars/AddACars";
 import Allsellers from "../Pages/Dashboard/AllSellers/Allsellers";
 import AllUsers from "../Pages/Dashboard/AllUsers/AllUsers";
@@ -58,10 +59,10 @@ export const router = createBrowserRouter([
                 path: '/advertise/:id',
                 element: <Advertise></Advertise>
             },
-            /* {
+            {
                 path: '/contact-us',
                 element: <Contact></Contact>
-            }, */
+            },
         ]
     },
     {
