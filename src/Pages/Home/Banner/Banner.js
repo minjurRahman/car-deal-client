@@ -1,8 +1,9 @@
 import React from 'react';
+import 'animate.css';
 
 const Banner = () => {
     return (
-        <div className="hero mt-7" style={{ backgroundImage: `url("https://img.chip.com.tr/storage/files/images/2022/04/15/jaguar-vision-gt-ailesi-1-igV0.jpg")` }}>
+        <div className="hero mt-7 animate__animated animate__pulse" style={{ backgroundImage: `url("https://img.chip.com.tr/storage/files/images/2022/04/15/jaguar-vision-gt-ailesi-1-igV0.jpg")` }}>
             <div className="hero-overlay bg-opacity-60"></div>
             <div className="hero-content text-center text-neutral-content lg:py-32">
                 <div className="max-w-md">

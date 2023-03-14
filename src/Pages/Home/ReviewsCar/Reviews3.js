@@ -10,7 +10,7 @@ const Reviews3 = () => {
           The Last Car sold from our website is here. You can check out here to explore our web site.
           The Last Car sold from our website is here. You can check out here to explore our web site.
         </h4>
-        <Button className="sm:w-5/12 sm:self-center lg:self-start mt-12 capitalize text-base rounded-3xl">
+        <Button className="sm:w-5/12 sm:self-center lg:self-start mt-12 capitalize text-base rounded-3xl btn btn-primary">
           Equipments
         </Button>
       </div>
